@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ShopEase | Clothing</title>
+    <link
+      rel="shortcut icon"
+      href="images/shop-ease-favi.jpg"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">ShopEase</div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="clothing.html">Clothing</a></li>
+          <li><a href="furniture.html">Furniture</a></li>
+          <li><a href="new-arrivals.html">New Arrivals</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="icons">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-heart"></i>
+        <i class="fas fa-shopping-cart"></i>
+      </div>
+    </header>
+
+    <!-- Page Hero -->
+
+    <section class="page-hero">
+      <h1>Clothing Collection</h1>
+
+      <p>Discover timeless styles made for everyday living.</p>
+    </section>
+
+    <!-- Category Filter -->
+
+    <section class="shop-section">
+      <div class="shop-top">
+        <h2>Clothing</h2>
+
+        <div class="filters">
+          <button onclick="filterProducts('all')">All</button>
+
+          <button onclick="filterProducts('men')">Men</button>
+
+          <button onclick="filterProducts('women')">Women</button>
+        </div>
+      </div>
+
+      <div class="product-container">
+        <div class="card product-item women">
+          <img src="images/suit3.jpg" />
+
+          <h3>Women's Casual Wear</h3>
+
+          <p>$44.99</p>
+
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+        <div class="card product-item women">
+          <img src="images/suit4.jpg" />
+
+          <h3>Women's Casual Wear</h3>
+
+          <p>$44.99</p>
+
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+        <div class="card product-item men">
+          <img src="images/clothing7.jpg" />
+
+          <h3>Denim Jacket</h3>
+
+          <p>$69.99</p>
+
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card product-item men">
+          <img src="images/clothing1.jpg" />
+
+          <h3>Classic T-Shirt</h3>
+
+          <p>$29.99</p>
+
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card product-item men">
+          <img src="images/clothing2.jpg" />
+
+          <h3>Classic T-Shirt</h3>
+
+          <p>$29.99</p>
+
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+        <div class="card product-item men">
+          <img src="images/clothing3.jpg" />
+
+          <h3>Classic T-Shirt</h3>
+
+          <p>$29.99</p>
+
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+        <div class="card product-item men">
+          <img src="images/sweater1.jpg" />
+
+          <h3>Classic T-Shirt</h3>
+
+          <p>$29.99</p>
+
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+        <div class="card product-item men">
+          <img src="images/sweater2.jpg" />
+
+          <h3>Classic T-Shirt</h3>
+
+          <p>$29.99</p>
+
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+        <div class="card product-item men">
+          <img src="images/sweater3.jpg" />
+
+          <h3>Classic T-Shirt</h3>
+
+          <p>$29.99</p>
+
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+        <div class="card product-item men">
+          <img src="images/suit8.jpg" />
+
+          <h3>Premium Jeans</h3>
+
+          <p>$59.99</p>
+
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card product-item women">
+          <img src="images/suit9.jpg" />
+
+          <h3>Elegant Dress</h3>
+
+          <p>$54.99</p>
+
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card product-item women">
+          <img src="images/hat6.jpg" />
+
+          <h3>Women's Casual Wear</h3>
+
+          <p>$44.99</p>
+
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card product-item women">
+          <img src="images/hat14.jpg" />
+
+          <h3>Women's Casual Wear</h3>
+
+          <p>$44.99</p>
+
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart -->
+
+    <div class="cart-panel" id="cartPanel">
+      <div class="cart-header">
+        <h2>Shopping Cart</h2>
+
+        <button id="closeCart">&times;</button>
+      </div>
+
+      <div id="cartItems"></div>
+
+      <h3>Total: $<span id="totalPrice">0.00</span></h3>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Brand -->
+        <div class="footer-column footer-brand">
+          <h2>ShopEase</h2>
+
+          <p>
+            Discover timeless fashion and modern furniture designed to make
+            everyday living better.
+          </p>
+
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+              <i class="fab fa-tiktok"></i>
+            </a>
+
+            <a href="#">
+              <i class="fab fa-pinterest-p"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+
+          <a href="index.html">Home</a>
+
+          <a href="clothing.html">Clothing</a>
+
+          <a href="furniture.html">Furniture</a>
+
+          <a href="new-arrivals.html">New Arrivals</a>
+
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="footer-column">
+          <h3>Customer Service</h3>
+
+          <a href="#">Shipping & Delivery</a>
+
+          <a href="#">Return Policy</a>
+
+          <a href="#">Privacy Policy</a>
+
+          <a href="#">Terms & Conditions</a>
+
+          <a href="#">FAQ</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+
+          <p>
+            <i class="fas fa-envelope"></i>
+            shopease@.com
+          </p>
+
+          <p>
+            <i class="fas fa-phone"></i>
+            +44 xxx xxx xxxx
+          </p>
+
+          <p>
+            <i class="fas fa-location-dot"></i>
+            Oxford, UK
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+
+      <div class="footer-bottom">
+        <p>© 2026 ShopEase. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
