@@ -225,20 +225,6 @@ nav ul li a:hover {
   margin-bottom: 15px;
 }
 
-.newsletter .cart-panel {
-  position: fixed;
-  top: 0;
-  right: -400px;
-  width: 350px;
-  height: 100%;
-  background: #fff;
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
-  transition: 0.4s;
-  padding: 20px;
-  overflow-y: auto;
-  z-index: 9999;
-}
-
 .cart-panel.active {
   right: 0;
 }
@@ -584,27 +570,57 @@ nav ul li a:hover {
 /* responsive  */
 
 @media (max-width: 768px) {
-  .footer-container {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px 25px;
-    padding: 50px 7%;
+  /* Header */
+  header {
+    padding: 15px 6%;
   }
-}
 
-@media (max-width: 500px) {
-  .footer-container {
+  .logo {
+    font-size: 24px;
+  }
+
+  nav ul li {
+    margin: 0 8px;
+  }
+
+  /* Hero */
+  .hero {
+    flex-direction: column;
+    padding: 50px 6%;
+    gap: 30px;
+  }
+
+  .hero-text,
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+  }
+
+  /* Categories */
+  .category-container {
     grid-template-columns: 1fr;
-    text-align: left;
   }
 
-  .social-icons {
-    margin-top: 20px;
+  /* Products */
+  .product-container {
+    grid-template-columns: 1fr;
   }
-}
 
-/* responsive  */
+  /* Shop */
+  .shop-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
 
-@media (max-width: 768px) {
+  .page-hero h1 {
+    font-size: 35px;
+  }
+
+  /* Contact */
   .contact-section {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -614,42 +630,27 @@ nav ul li a:hover {
   .contact-form {
     padding: 25px;
   }
-}
 
-/* responsive  */
-
-@media (max-width: 768px) {
-  .shop-top {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+  /* Footer */
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 25px;
+    padding: 50px 7%;
   }
 
-  .page-hero h1 {
-    font-size: 35px;
-  }
-
+  /* Cart */
   .cart-panel {
     width: 100%;
     max-width: 100%;
   }
 }
 
-/* responsive  */
-
-@media (max-width: 768px) {
-  .shop-top {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+@media (max-width: 500px) {
+  .footer-container {
+    grid-template-columns: 1fr;
   }
 
-  .page-hero h1 {
-    font-size: 35px;
-  }
-
-  .cart-panel {
-    width: 100%;
-    max-width: 100%;
+  .hero-text h1 {
+    font-size: 36px;
   }
 }
