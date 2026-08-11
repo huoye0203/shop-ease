@@ -71,9 +71,6 @@ cartButtons.forEach((button) => {
 
 function updateCart() {
   if (!cartItems) {
-    // Save cart even if this page
-    // doesn't have a cart panel
-
     localStorage.setItem("shopeaseCart", JSON.stringify(cart));
 
     return;
